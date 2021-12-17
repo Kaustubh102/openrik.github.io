@@ -1,0 +1,103 @@
+<html>
+    <head>
+      <title>E-commerce | About Us</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      <nav class="nav navtop">
+      <div class="logo">
+        <a href="index.html">☆ ☆ ☆ OpenRik ☆ ☆ ☆</a>
+      </div>
+      <div class="navside">
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="#">Login/Register</a>
+      </div>
+    </nav>
+    <div class="contactcon">
+         <h3>Contact Us</h3>
+         <div class="cont">
+         <div class="gmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.59191794114363!2d79.1353681257602!3d21.133658752523697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c766f8d74bdb%3A0x3a90b8f7770f9cf8!2sYuwa%20Chowk%2C%20Kharbi%2C%20Nagpur%2C%20Maharashtra%20440024!5e0!3m2!1sen!2sin!4v1639676366109!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+         <div class="contactcontent">
+             <pre><b>Address:</b> Yuwa Chowk, Nagpur, India, 440009</pre>
+             <pre><b>Call:</b> +917798938485</pre>
+             <pre><b>Mail:</b> 777rajatyewale@gmail.com</pre>
+         </div>
+         </div>
+    </div>
+    <div class="feed">
+        <h3>Write a Review</h3>
+         <div class="feedform">
+             <form name="google-sheet" method="post">
+                 <input type="text" name="Name" placeholder="Your name"><br>
+                 <input type="email" name="Email" placeholder="Email"><br>
+                 <input type="number" name="Number" placeholder="Mobile number"><br>
+                 <textarea rows="5" cols="7" name="Reviews" name="" placeholder="Write a Review"></textarea><br>
+                 <button type="submit">Submit</button><br>
+                 <button type="reset">Reset</button>
+             </form>
+         </div>
+    </div>
+    <footer>
+          <div class="logo">
+              <a href="#">𝙊𝙥𝙚𝙣𝙍𝙞𝙠</a>
+          </div><br><br>
+          <div class="pages">
+              <h3>Pages</h3>
+              <a href="about.html">About Us</a>|
+              <a href="services.html">Services</a>|
+              <a href="">Blogs</a>|
+              <a href="">Login</a>|
+              <a href="">Sign Up</a>|
+          </div>
+          <div class="doc">
+              <h3>Documents</h3>
+              <a href="privacypolicy.pdf">Privacy Policy</a>|
+              <a href="aboutus.pdf">Terms and Conditions</a>|
+              <a href="">Refund Policy</a>|
+          </div>
+          <div class="social">
+              <h3>Follow Us</h3>
+             <a href="https://www.facebook.com/profile.php?id=100075841218386" target="_black">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+             </a>
+             <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+             </a>
+             <a href="https://www.instagram.com/kaustubh_yewale/" target="_black">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+             </a>
+             <a href="" target="_black"><i class="fa fa-twitter" aria-hidden="true"></i>
+             </a>
+          </div>
+          <div class="contact">
+              <h3>Contact Us</h3>
+             <a href="https://api.WhatsApp.com/send?phone=+917774964102" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+             </a>
+             <a href="tel: +917774964102" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i>
+             </a>
+             <a href="mailto: yewale.kaustubh01@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i>
+             </a>
+          </div><hr>
+          <p>Copyright &copy; 2021 OpenRik. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyG9q9SDzuTVv6-uQ_2iq1PISdrfa-NjFyfAC43dhWE-tQ08Oi-M8EjRxPhpffwXCl2/exec'
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    </body>
+    </html>
